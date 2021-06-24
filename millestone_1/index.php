@@ -13,39 +13,33 @@
     integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 <body>
-    <div id="app">
+    
             <!-- header -->
             <header class="site_header">
                 <div class="container">
-                    <img src="./img/logo_spoti.png" alt="">
+                   <img src="./dist/img/logo_spoti.png" alt="">
                 </div>
 
             </header>
-            <!-- selector genres -->
-            <div class="select_genre">
-                <select v-model= "selectedGenre">
-                    <option value="">Genres</option>
-                    <option v-for="genre in genres" :value="genre">
-                        {{ genre }}
-                    </option>
-                </select>
-            </div>
+            
             <!-- container with discs -->
             <main class="discs_container container">
-                
-                <div class="discs_list" 
-                v-for="disk in discs" v-if="selectedGenre == disk.genre || selectedGenre == '' " v-if="!error">
-                    <img :src="disk.poster" alt="">
-                    <h3>{{disk.title}}</h3>
-                    <span class="author">{{disk.author}}</span>
-                    <span class="year">{{disk.year}}</span>
-                </div>
-                
+                <?php foreach ($databases as  $database) {
+                ?>
+                <!-- printing all the posters -->
+                <img src="<?php echo $database['posters'] ?>" alt="">
+                <!-- printing all the titles -->
+                <h3><?php echo $database['title'] ?></h3> 
+                <!-- printing all the authors -->
+                <span class="author"><?php echo $database['author'] ?></span>
+                <!-- printing all the years -->
+                <span  class="year"> <?php echo $database['year'] ?></span>
 
+                <?php 
+                }
+                ?>
             </main>
-    </div>
-    <!-- VUE JS -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="./dist/js/app.js"></script>
+    
+   
 </body>
 </html>
