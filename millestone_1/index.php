@@ -1,5 +1,5 @@
 <?php 
-include 'database.php';
+include __DIR__.'/php-ajax-dischi/database.php';
 ?>
 
 <!DOCTYPE html>
@@ -26,20 +26,23 @@ include 'database.php';
             
             <!-- container with discs -->
             <main class="discs_container container">
+            
                 <?php foreach ($databases as  $database) {
                 ?>
-                <!-- printing all the posters -->
-                <img src="<?php echo $database['posters'] ?>" alt="">
-                <!-- printing all the titles -->
-                <h3><?php echo $database['title'] ?></h3> 
-                <!-- printing all the authors -->
-                <span class="author"><?php echo $database['author'] ?></span>
-                <!-- printing all the years -->
-                <span  class="year"> <?php echo $database['year'] ?></span>
-
+                <div class="discs_lis">
+                    <!-- printing all the posters -->
+                    <img src="<?php echo $database['posters'] ?>" alt="">
+                    <!-- printing all the titles -->
+                    <h3><?php echo $database['title'] ?></h3> 
+                    <!-- printing all the authors -->
+                    <span class="author"><?php echo $database['author'] ?></span>
+                    <!-- printing all the years -->
+                    <span  class="year"> <?php echo $database['year'] ?></span>
+                </div>
                 <?php 
                 }
                 ?>
+
             </main>
     
    
