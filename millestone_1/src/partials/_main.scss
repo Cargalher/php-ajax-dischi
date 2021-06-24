@@ -1,0 +1,36 @@
+.discs_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    padding: 50px 0;
+}
+.discs_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background: #2E3A46;
+    padding: 15px;
+    margin: 10px 20px;
+    height: 280px;
+    flex-basis: 177px;
+    
+    
+    
+}
+.discs_list img{
+    height: 100px;
+}
+h3{
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin:15px 0;
+}
+.discs_list span.author, span.year{
+    color:gray;
+    font-size: 15px;
+}
