@@ -35,6 +35,30 @@
             'author' => 'Eric Clapton',
             'year' => 2002,
             'poster' => 'https://images-na.ssl-images-amazon.com/images/I/81MDAIdh78L._SY355_.jpg'
+        ],
+        [
+            'title' => 'Made in Japan',
+            'author' => 'Deep Purple',
+            'year' => 1972,
+            'poster' => 'https://images-na.ssl-images-amazon.com/images/I/51rggtPgmRL.jpg'
+        ],
+        [
+            'title' => 'And Justice for All',
+            'author' => 'Metallica',
+            'year' => 1988,
+            'poster' => 'https://images-na.ssl-images-amazon.com/images/I/81r3FVfNG3L._SY355_.jpg'
+        ],
+        [
+            'title' => 'Hard Wired',
+            'author' => 'Dave Weckl',
+            'year' => 1994,
+            'poster' => 'https://img.discogs.com/KOBsqQwKiNKH-q927oHMyVdDzSo=/fit-in/596x596/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6406665-1418464475-6120.jpeg.jpg'
+        ],
+        [
+            'title' => 'Bad',
+            'author' => 'Michael Jackjson',
+            'year' => 1987,
+            'poster' => 'https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg'
         ]
     ];
 ?>
