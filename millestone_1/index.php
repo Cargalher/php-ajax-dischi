@@ -30,7 +30,7 @@ include __DIR__.'/dist/database.php';
             
                 <?php foreach ($databases as  $database) {
                 ?>
-                <div class="discs_lis">
+                <div class="discs_list">
                     <!-- printing all the posters -->
                     <img src="<?php echo $database['posters'] ?>" alt="">
                     <!-- printing all the titles -->
