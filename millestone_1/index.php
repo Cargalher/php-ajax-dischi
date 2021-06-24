@@ -1,5 +1,6 @@
 <?php 
-include __DIR__.'/php-ajax-dischi/database.php';
+
+include __DIR__.'/dist/database.php';
 ?>
 
 <!DOCTYPE html>
