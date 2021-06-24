@@ -32,7 +32,7 @@ include __DIR__.'/dist/database.php';
                 ?>
                 <div class="discs_list">
                     <!-- printing all the posters -->
-                    <img src="<?php echo $database['posters'] ?>" alt="">
+                    <img src="<?php echo $database['poster'] ?>" alt="">
                     <!-- printing all the titles -->
                     <h3><?php echo $database['title'] ?></h3> 
                     <!-- printing all the authors -->
