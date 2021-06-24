@@ -7,7 +7,39 @@
   \********************/
 /***/ (() => {
 
-alert('hello!');
+var app = new Vue({
+  el: '#app',
+  data: {
+    discs: [],
+    error: null,
+    genres: [],
+    selectedGenre: ''
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('https://flynn.boolean.careers/exercises/api/array/music') //calling ajax
+    .then(function (response) {
+      // Mandatory_part stampiamo a schermo una card per ogni album.                     //saving all the discs
+      _this.discs = response.data.response;
+      console.log(_this.discs); //bonus1_ Creare una select con tutti i generi dei dischi. In base a cosa scegliamo nella select, vedremo i corrispondenti cd.
+
+      _this.discs.forEach(function (disk) {
+        if (!_this.genres.includes(disk.genre)) {
+          _this.genres.push(disk.genre);
+        }
+      }); // bonus 2_Ordinare i dischi per anno di uscita.// order by year of release
+
+
+      _this.discs.sort(function (oldest, newest) {
+        return oldest.year - newest.year;
+      });
+    })["catch"](function (e) {
+      console.error(e);
+      _this.error = "Sorry could not cnect to the API";
+    });
+  }
+});
 
 /***/ }),
 
