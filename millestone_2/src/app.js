@@ -8,7 +8,7 @@ const app = new Vue ({
     },
     mounted(){
         axios
-        .get('https://flynn.boolean.careers/exercises/api/array/music')                    //calling ajax
+        // .get('/dist/api.php')                    //calling ajax
         .then(response => {   
             // Mandatory_part stampiamo a schermo una card per ogni album.                     //saving all the discs
             this.discs = response.data.response;

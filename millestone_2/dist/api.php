@@ -61,3 +61,5 @@
             'poster' => 'https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg'
         ]
     ];
+    header ('Content-type: application/json');
+    echo json_encode($databases);
