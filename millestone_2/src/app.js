@@ -1,6 +1,7 @@
 const app = new Vue ({
     el: '#app',
     data:{
+        url: '../dist/api.php',
         discs: [],
         error: null,
         genres: [],
@@ -8,7 +9,7 @@ const app = new Vue ({
     },
     mounted(){
         axios
-        // .get('/dist/api.php')                    //calling ajax
+        .get(this.url)                    //calling ajax
         .then(response => {   
             // Mandatory_part stampiamo a schermo una card per ogni album.                     //saving all the discs
             this.discs = response.data.response;
