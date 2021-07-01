@@ -1,7 +1,7 @@
 const app = new Vue ({
     el: '#app',
     data:{
-        url: '/api/api.php',
+        url: './api/api.php',
         discs: [],
         error: null,
         genres: [],
@@ -28,6 +28,6 @@ const app = new Vue ({
         .catch(e =>{
             console.error(e);
             this.error = "Sorry could not conect to the API"
-        })
+        });
     }
 });
