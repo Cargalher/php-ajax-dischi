@@ -1,7 +1,7 @@
 const app = new Vue ({
     el: '#app',
-    data:{
-        url: './api/api.php',
+    data: {
+        url: '/api/api.php',
         discs: [],
         error: null,
         genres: [],
